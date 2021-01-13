@@ -1,0 +1,17 @@
+{
+	"name": "svelte-app",
+	"version": "1.0.0",
+	"scripts": {
+		"webpack": "cross-env TS_NODE_PROJECT=\"tsconfig.tsnode.json\" webpack",
+		"build": "npm run webpack -- --env production",
+		"analyze": "npm run webpack -- --env analyzeBundle",
+		"watch": "npm run webpack -- --watch",
+		"dev": "npm run webpack -- serve --config webpack.config.devserver.ts --progress --open ",
+		"start": "sirv dist",
+		"validate": "svelte-check"
+	},
+	"devDependencies": {
+		"@raythurnevoid/svelte-template": "^0.0.7"
+	},
+	"dependencies": {}
+}

@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "site"
+		}
+	],
+	"settings": {
+		"editor.formatOnSave": true,
+		"prettier.useTabs": true,
+		"editor.insertSpaces": false
+	},
+	"extensions": {
+		"recommendations": [
+			"svelte.svelte-vscode"
+		]
+	}
+}
