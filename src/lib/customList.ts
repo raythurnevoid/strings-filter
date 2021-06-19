@@ -1,8 +1,11 @@
 import { filterStrings } from "./filterStrings";
 import type { StringList } from "./types";
 
-export function customList(toParse: StringList, opt?: Options): string {
-	let parsed: string;
+export function customList(
+	toParse: StringList,
+	opt?: Options
+): string | undefined {
+	let parsed: string | undefined;
 
 	const parsedArray = filterStrings(toParse);
 

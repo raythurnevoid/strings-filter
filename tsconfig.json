@@ -1,12 +1,13 @@
 {
-	"extends": "@raythurnevoid/svelte-template/tsconfig.json",
+	"extends": "@raythurnevoid/ts-node-template/tsconfig.json",
 	"compilerOptions": {
-		"baseUrl": "."
+		"baseUrl": ".",
+		"outDir": "./lib",
+		"types": [
+			"node"
+		]
 	},
 	"include": [
-		"src/**/*"
-	],
-	"exclude": [
-		"**/node_modules/*"
+		"src"
 	]
 }

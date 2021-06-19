@@ -1,5 +1,5 @@
 {
-	"extends": "@raythurnevoid/svelte-template/tsconfig.json",
+	"extends": "@raythurnevoid/ts-node-template/tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": "."
 	},

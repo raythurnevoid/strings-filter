@@ -1,35 +1,37 @@
 {
 	"name": "@raythurnevoid/strings-filter",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
-	"main": "./cjs/index.js",
-	"module": "./esm/index.ts",
 	"scripts": {
 		"clean-lib": "del-cli lib",
+		"copy:package:cjs": "copyfiles --up 1 cjs/* lib/cjs",
 		"copy:package": "copyfiles package.json lib",
-		"copy:src": "copyfiles --up 1 src/**/*.* lib/ts",
+		"copy:src": "copyfiles --up 1 src/lib/*.* lib/src",
+		"tsc": "tsc -p tsconfig.lib.json",
 		"tsc:cjs": "tsc -p tsconfig.lib.cjs.json",
-		"tsc:esm": "tsc -p tsconfig.lib.esm.json",
-		"lib": "npm-run-all clean-lib copy:package copy:src tsc:cjs tsc:esm",
+		"lib": "npm-run-all clean-lib copy:package copy:package:cjs copy:src tsc tsc:cjs",
 		"prepackage": "npm run lib",
 		"package": "npm publish ./lib --access public",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./index.js",
+			"require": "./cjs/index.js"
+		},
+		"./cjs/*": "./cjs/*"
+	},
+	"browserslist": [
+		"> 5% or node >= 16"
+	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://raythurnevoid:6757d77f7939d498560f1557db1864b9f4a4a1bf@github.com/raythurnevoid/svelte-group-components.git"
+		"url": "git+https://github.com/raythurnevoid/strings-filter.git"
 	},
 	"author": "Ray Thurne",
 	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/raythurnevoid/strings-filter/issues"
-	},
-	"homepage": "https://github.com/raythurnevoid/strings-filter#readme",
-	"dependencies": {},
 	"devDependencies": {
-		"@raythurnevoid/svelte-template": "^0.0.7",
-		"copyfiles": "^2.4.1",
-		"del-cli": "^3.0.1",
-		"npm-run-all": "^4.1.5"
+		"@raythurnevoid/ts-node-template": "^0.1.0"
 	}
 }

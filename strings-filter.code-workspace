@@ -2,19 +2,39 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "site"
 		}
 	],
 	"settings": {
-		"editor.formatOnSave": true,
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#628543",
+			"activityBar.inactiveForeground": "#ffffff",
+			"activityBar.activeBackground": "#eaec58",
+			"activityBar.foreground": "#000000",
+			"activityBar.activeBorder": "#ff0000",
+			"activityBarBadge.background": "#574700",
+			"activityBarBadge.foreground": "#ffffff",
+		},
 		"prettier.useTabs": true,
-		"editor.insertSpaces": false
+		"prettier.singleQuote": false,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"typescript.tsdk": "node_modules\\typescript\\lib",
+		"typescript.preferences.importModuleSpecifier": "relative",
+		"typescript.preferences.importModuleSpecifierEnding": "js"
 	},
 	"extensions": {
 		"recommendations": [
-			"svelte.svelte-vscode"
+			"esbenp.prettier-vscode",
+			"svelte.svelte-vscode",
+			"CoenraadS.bracket-pair-colorizer-2",
+			"aaron-bond.better-comments",
+			"wmaurer.change-case",
+			"mikestead.dotenv",
+			"usernamehw.errorlens",
+			"christian-kohler.path-intellisense",
+			"searKing.preview-vscode",
+			"pflannery.vscode-versionlens",
+			"vscode-icons-team.vscode-icons",
 		]
 	}
 }

@@ -1,6 +1,6 @@
 import type { StringList } from "./types";
 
-export function filterStrings(toFilter: StringList): string[] {
+export function filterStrings(toFilter: StringList): string[] | undefined {
 	if (!toFilter) return undefined;
 
 	const parsedArray = toFilter
@@ -12,7 +12,7 @@ export function filterStrings(toFilter: StringList): string[] {
 		.filter((item) => item || item === undefined);
 
 	if (parsedArray.some((item) => item !== undefined)) {
-		return parsedArray.filter((item) => item);
+		return parsedArray.filter((item) => item) as string[];
 	} else {
 		return [];
 	}
