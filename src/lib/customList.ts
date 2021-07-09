@@ -1,5 +1,5 @@
-import { filterStrings } from "./filterStrings";
-import type { StringList } from "./types";
+import { filterStrings } from "./filterStrings.js";
+import type { StringList } from "./types.js";
 
 export function customList(
 	toParse: StringList,

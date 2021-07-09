@@ -1,4 +1,4 @@
-import type { StringList } from "./types";
+import type { StringList } from "./types.js";
 
 export function filterStrings(toFilter: StringList): string[] | undefined {
 	if (!toFilter) return undefined;
